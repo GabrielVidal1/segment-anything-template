@@ -1,11 +1,19 @@
 {
-    "name": "Segment Anything - Default",
-    "category": "Computer Vision",
-    "example_input": {
-        "image":"Image as base64 string"
-    },
-    "example_output": {
-        "masks": [{"segmentation":[]}, {"area":9840}, {"bbox":[]}, {"predicted_iou":32}, {"point_coords":""}, {"stability_score":""}, {"crop_box":""}]
-    },
-    "version": "1"
-  }
+  "name": "Segment Anything - Default",
+  "category": "Computer Vision",
+  "example_input": {
+    "image": "Image as base64 string"
+  },
+  "example_output": {
+    "masks": [
+      { "segmentation": [] },
+      { "area": 9840 },
+      { "bbox": [] },
+      { "predicted_iou": 32 },
+      { "point_coords": "" },
+      { "stability_score": "" },
+      { "crop_box": "" }
+    ]
+  },
+  "version": "1"
+}

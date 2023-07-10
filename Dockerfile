@@ -1,4 +1,6 @@
-FROM pytorch/pytorch:1.13.1-cuda11.6-cudnn8-devel
+# This is a potassium-standard dockerfile, compatible with Banana
+# Don't change this. Currently we only support this specific base image.
+FROM pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
 
 WORKDIR /
 
@@ -16,9 +18,8 @@ ADD server.py .
 #Download checkpoint
 RUN wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
 
-# Add your custom app code, init() and inference()
-ADD app.py .
+ADD . .
 
 EXPOSE 8000
 
-CMD python3 -u server.py
+CMD python3 -u app.py
